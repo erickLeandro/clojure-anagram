@@ -8,5 +8,5 @@
   (filter 
     (fn [x] 
       (and 
-        (not= (vector (s/lower-case word)) words)
+        (not= (s/lower-case x) (s/lower-case word))
         (= (sort-word word) (sort-word x)))) words))

@@ -32,7 +32,10 @@
            (anagram/anagrams-for "Orchestra" coll)))))
 
 (deftest word-is-not-own-anagram
-(is (= [] (anagram/anagrams-for "banana" ["banana"]))))
+  (is (= [] (anagram/anagrams-for "banana" ["banana"]))))
+
+(deftest test-eduardo
+  (is (= ["cabo"] (anagram/anagrams-for "boca" ["BOCA" "boca" "cabo"]))))
 
 (deftest capital-word-is-not-own-anagram
   (is (= [] (anagram/anagrams-for "BANANA" ["banana"]))))
