@@ -1,0 +1,47 @@
+(= (vec (s/lower-case "BANANA")) (s/lower-case "banana"))
+(= (vec (clojure.string/lower-case "BANANA")) (clojure.string/lower-case "banana"))
+(= (vec (clojure.string/lower-case "BANANA")) (clojure.string/lower-case ["banana"]))
+(vec (clojure.string/lower-case "BANANA")
+(vec (clojure.string/lower-case "BANANA"))
+(apply str (vec (clojure.string/lower-case "BANANA"))
+(apply str (vec (clojure.string/lower-case "BANANA")))
+(apply str (clojure.string/lower-case "BANANA"))
+(vec (apply str (clojure.string/lower-case "BANANA")))
+(vector (apply str (clojure.string/lower-case "BANANA")))
+(vector (clojure.string/lower-case "BANANA"))
+( = (vector (clojure.string/lower-case "BANANA")) ["banana"])
+( = (vector (clojure.string/lower-case "BANANA")) (clojure.string/lower-case ["banana"]))
+( = (vector (clojure.string/lower-case "BANANA")) (vector (clojure.string/lower-case ["banana"])))
+(= (vector (clojure.string/lower-case "BANANA")) (vector (clojure.string/lower-case ["banana"])))
+(vector (clojure.string/lower-case ["banana"]))
+(clojure.string/lower-case ["banana"])
+["banana"]
+(= ([] '()))
+(= [] '())
+(= "banana" "BANANA")
+(defn anagram-filter [word words]
+  (filter 
+    (fn [x] 
+      (and 
+        (not= (vector (s/lower-case word)) words)
+        (= (sort-word word) (sort-word x))) words)))
+(defn anagram-filter [word words]
+  (filter 
+    (fn [x] 
+      (and 
+        (not= (vector (s/lower-case word)) words)
+(defn anagram-filter [word words]
+  (filter 
+    (fn [x] 
+      (and 
+        (not= (vector (clojure.string/lower-case word)) words)
+        (= (sort-word word) (sort-word x))) words)))
+(defn sort-word [word]
+  (sort (clojure.string/lower-case word)))
+(defn anagram-filter [word words]
+  (filter 
+    (fn [x] 
+      (and 
+        (not= (vector (clojure.string/lower-case word)) words)
+        (= (sort-word word) (sort-word x))) words)))
+(anagram-filter "banana" ["banana"])
